@@ -26,7 +26,7 @@ The first generation of individuals must be initialized using a range of values.
 - **Parent selection technique:** the selection is performed by tournament. The best individual is selected to be part of the next generation
 - **Crossover:** combines the original vector *xi* with the new one *vi* for creating another one *ui*
 
-![descarga](https://user-images.githubusercontent.com/72468795/204600654-6e0df280-f57e-4635-8a6a-809b7d110db1.png)
+  ![descarga](https://user-images.githubusercontent.com/72468795/204600654-6e0df280-f57e-4635-8a6a-809b7d110db1.png)
 
   For each variable *k* or *ui*, the value is selected randomly between *vi* or *ui*. If a random number between 0 and 1 is less than Cr, the value is taken from *vi*.   For guarantying that at less one value is taken from *vi*, the value of a variable randomly selected l, is assigned with the value of *vi*.
 The new vector *ui* is positionated in one of the corners of the hyperrectangle generated with the positions of *xi* and *vi*
