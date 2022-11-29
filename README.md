@@ -26,17 +26,17 @@ The first generation of individuals must be initialized using a range of values.
 - **Parent selection technique:** the selection is performed by tournament. The best individual is selected to be part of the next generation
 - **Crossover:** combines the original vector *xi* with the new one *vi* for creating another one *ui*
 
-  ![descarga (1)](https://user-images.githubusercontent.com/72468795/204596691-7ccd8189-1336-4794-a386-e83de93b6bbf.png)
+![descarga](https://user-images.githubusercontent.com/72468795/204600654-6e0df280-f57e-4635-8a6a-809b7d110db1.png)
 
   For each variable *k* or *ui*, the value is selected randomly between *vi* or *ui*. If a random number between 0 and 1 is less than Cr, the value is taken from *vi*.   For guarantying that at less one value is taken from *vi*, the value of a variable randomly selected l, is assigned with the value of *vi*.
 The new vector *ui* is positionated in one of the corners of the hyperrectangle generated with the positions of *xi* and *vi*
-- **Mutation:** in this operator, for each individual *xi*, another one called *vi* is generated. The first step consists of randomly selecting three individuals from the population: ![descarga (2)](https://user-images.githubusercontent.com/72468795/204597454-5d7f6516-009a-4eef-8336-87dff02dad12.png).The new individual *vi* is calculated as follows: 
+- **Mutation:** in this operator, for each individual *xi*, another one called *vi* is generated. The first step consists of randomly selecting three individuals from the population: ![descarga (1)](https://user-images.githubusercontent.com/72468795/204600867-518fff97-1101-4168-9665-e99d2ce8bd7f.png).The new individual *vi* is calculated as follows: 
 
-  ![descarga (3)](https://user-images.githubusercontent.com/72468795/204597830-82139d13-0c4d-4e70-8a83-212c0dd3f6a4.png)
+  ![descarga (2)](https://user-images.githubusercontent.com/72468795/204601013-a80b8f3d-4b4b-490a-a5e7-b75c10fbba6c.png)
 
   Where F is a random number between 0 and 2.
-The difference between ![descarga (4)](https://user-images.githubusercontent.com/72468795/204598208-0cc6ebe8-b837-4c7d-bb2e-281208fd7499.png) and ![descarga (5)](https://user-images.githubusercontent.com/72468795/204598349-455b1295-f467-4068-8a0c-2aad7b77ba30.png) defines the direction and the magnitude of mutation. *F* slightly changes the magnitude. ![descarga (6)](https://user-images.githubusercontent.com/72468795/204598492-3b126d53-b572-47e7-807c-72b68d4b8f56.png) represents the initial point.
-At the beginning, all the individuals are dispersed and ![descarga (7)](https://user-images.githubusercontent.com/72468795/204599532-a809be8b-7eba-4ad7-99d0-6ea3d75a7ffc.png) is big, but when the algorithm is converging, the individuals are concentrated in some local minimums and the value of ![descarga (7)](https://user-images.githubusercontent.com/72468795/204599591-faae08ca-63ee-4308-88ff-f4ab9109d185.png) is smaller. It is magic!
+The difference between ![descarga (3)](https://user-images.githubusercontent.com/72468795/204601235-0926860a-30a8-402c-9d6e-53476cc7aa85.png) and ![descarga (4)](https://user-images.githubusercontent.com/72468795/204601346-b0d3c014-e098-4c01-801d-612f0d1dad2b.png) defines the direction and the magnitude of mutation. *F* slightly changes the magnitude. ![descarga (5)](https://user-images.githubusercontent.com/72468795/204601776-e6111558-46d0-44df-960f-852f3a759763.png) represents the initial point.
+At the beginning, all the individuals are dispersed and ![descarga (6)](https://user-images.githubusercontent.com/72468795/204602031-d19526bb-fbaa-4f46-9b19-9811ae683c6f.png) is big, but when the algorithm is converging, the individuals are concentrated in some local minimums and the value of ![descarga (6)](https://user-images.githubusercontent.com/72468795/204601984-b75a7f94-5c9d-452e-9edd-ea097bb46fb9.png) is smaller. It is magic!
 - **Survivor selection:** the selection is performed by tournament. The vest individual of *ui* and *xi* is selected to be part of the next generation
 
 - **In the problem:** individuals are represented by vectors transformed to 3x3 pairwise matrices that symbolize the transformation matrix necessary to arrive at the real colors of the palette
